@@ -14,7 +14,7 @@
 <body>
     <div class="container">
         <nav class="navbar navbar-light bg-light my-md-4">
-            <a class="navbar-brand" href="#">Very Secure Hello World Page, v1.0</a>
+            <a class="navbar-brand" href="<c:url value="/" />">Very Secure Hello World Page, v1.0</a>
             <div class="text-right">
                 <security:authorize access="isAuthenticated()">
                     <form class="form-inline" action="<c:url value="/logout" />" method="post">
