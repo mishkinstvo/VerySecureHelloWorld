@@ -4,7 +4,7 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <title>Register</title>
+    <title>Very secure hello world app</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" />
     <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" />
     <style>
@@ -36,5 +36,8 @@
             </div>
         </footer>
     </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="<c:url value="/resources/js/ratePasswordStrength.js?v1" />"></script>
 </body>
 </html>

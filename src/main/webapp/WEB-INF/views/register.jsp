@@ -29,35 +29,4 @@
         <button type="submit" class="btn btn-primary">Hurt me plenty</button>
         <a class="btn" href="<c:url value="/" />">I&rsquo;m too young to die</a>
     </form>
-
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-    <script src="https://terrylinooo.github.io/jquery.disableAutoFill/assets/js/jquery.disableAutoFill.min.js"></script>
-
-    <script>
-        function displayStrengthRate(strength) {
-            var message = '<span class="badge badge-danger">is too weak, maybe try something longer?</span>';
-
-            if (strength === 'STRONG') {
-                message = '<span class="badge badge-success">is strong enough, great job!</span>';
-            }
-            if (strength === 'ACCEPTABLE') {
-                message = '<span class="badge badge-warning">is acceptable, but you can do better :)</span>';
-            }
-
-            $('#strength').html(message);
-            $('form#register button[type=submit]').attr('disabled', strength === 'WEAK');
-        }
-
-        function rateStrength() {
-            $.get("passwords/strength", {'password': $('#password').val()}, function(data) {
-                displayStrengthRate(data);
-            });
-        }
-
-        $('#password').on('change input', function () {
-            rateStrength();
-        });
-
-        rateStrength();
-    </script>
 </t:baseTemplate>
